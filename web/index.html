@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>File Deliver</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="file-area hidden">
+    <fieldset>
+      <legend>Send File</legend>
+      <input type="file" id="file"/>
+      <button id="send-btn" disabled>Send</button>
+    </fieldset>
+    <ul id="filelist"></ul>
+  </div>
+  <div class="connect-area">
+    <div class="connection-join-area">
+      <button id="create-btn">Create New Room</button>
+      <fieldset>
+        <legend>Join Room</legend>
+        <label for="room-id">Room ID: </label>
+        <input type="text" id="room-id"/>
+        <button id="join-btn">Join</button>
+      </fieldset>
+    </div>
+    <div class="connection-info-area hidden">
+      <fieldset>
+        <legend>Room Information</legend>
+        <label for="display-room-id"></label>
+        <input type="text" id="display-room-id" disabled/>
+        <button id="leave-btn">Leave</button>
+      </fieldset>
+      <fieldset>
+        <legend>Online Users</legend>
+        <ul id="userlist"></ul>
+      </fieldset>
+    </div>
+  </div>
+</div>
+<script src="js/libs/adapter.min.js"></script>
+<script src="js/libs/socket.io.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
